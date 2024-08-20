@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CDN BOOTSTRAP Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ">
+              <li class="nav-item">
+                <i class="bi bi-instagram fs-4"></i>
+              </li>
+              <li class="nav-item">
+                <h4 class="p-1">Instagram</h4>
+              </li>
+            </ul>
+
+            <form class="d-flex">
+              <!--CREACION DEL MODAL-->
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Cretate a new post
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                        <div class="pt-2">
+                          <button type="button" class="btn btn-light border-secondary"><i class="bi bi-camera-fill"></i></button>
+                          <button type="button" class="btn btn-light border-secondary mx-1"><i class="bi bi-geo-alt-fill"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CREACION DEL DROPDOWN-->
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="bi bi-gear-fill"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg justify-content-center">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+          <i class="bi bi-grid-3x3 fs-6" ></i>
+        </button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+          <i class="bi bi-square-fill fs-6 "></i>
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="container-fluid">
+          <div class="row my-4">
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/exquisita-chica-largo-cabello-ondulado-aretes-redondos-panuelo-moda-elegante-vestido-amarillo-posando-ojos-cerrados-sonriendo_197531-23921.jpg?t=st=1724178076~exp=1724181676~hmac=b51308ffe5181bd1365d00f5c488debae76886ec6af62f98fd4b6e8d2d1bb2c4&w=996" alt="Imagen de un perro y una mujer" class="img-fluid ">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/feliz-joven-compania-amigos-sonrientes-emocionados-parque_285396-7633.jpg?t=st=1724178482~exp=1724182082~hmac=77ee01f3789d6ad54557d7ab091e7e2bc3c395fe3049f84bb245d7fbc5530f07&w=996" alt="imagen de un grupo de personas alegres" class="img-fluid">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/brillante-ciudad-nocturna_1127-8.jpg?t=st=1724179214~exp=1724182814~hmac=da4b1a8f24afb59caf49fa7ecc2e7d2d61ab1e929884ac6ae8eae6e25167831b&w=996" alt="imagen de una ciudad"  class="img-fluid">
+            </div> 
+          </div>
+          
+          <div class="row my-4">
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/mujer-moda-posando-estudio_23-2148632206.jpg?t=st=1724179341~exp=1724182941~hmac=969995baddd0776034c65859bb52ae4a0364905ae2ea99315bb0c0f52ef8571c&w=996" alt="Imagen de una mujer sonriendo" class="img-fluid">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/vista-torre-eiffel_1393-69.jpg?t=st=1724179443~exp=1724183043~hmac=bf3bddbc904ed5b68e77207d39c9be47b95eb2be682f99e36ca82aaa762611ed&w=996" alt="imagen de la torre ifel" class="img-fluid">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/alegres-amigos-posando-fiesta_23-2148231957.jpg?t=st=1724179511~exp=1724183111~hmac=a9336fd0316f9b2e3cc648e274f15369c86d19630a344512317287b808879ca0&w=996" alt="imagen de personas celebrando"  class="img-fluid">
+            </div> 
+          </div>
+          
+          <div class="row my-4">
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/hija-feliz-divirtiendose-sus-padres-mientras-muda-apartamento-nuevo_637285-12378.jpg?t=st=1724179587~exp=1724183187~hmac=70969ecef1fe71dda8fbc7c1a40a7c819f9b2201895c5d6afcf22865d0a3c3ae&w=996" alt="Imagen de una familia" class="img-fluid">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/encendido-computadora-portatil-gris_400718-47.jpg?t=st=1724179622~exp=1724183222~hmac=48ab3377c4cb83103c5c4f7b690bba64803d690e72c7edab2892ae53d8325926&w=996" alt="imagen de code" class="img-fluid">
+            </div>
+            <div class="col-4">
+              <img src="https://img.freepik.com/foto-gratis/joven-pareja-hermosa-posando-sonriendo-divirtiendose-sobre-pared-azul-hombre-abrigo-lluvia_176420-11821.jpg?t=st=1724179703~exp=1724183303~hmac=14041e928a169dbea3e39e4735fd5f5d68874ab27e03057bd9f9ecd960427319&w=996" alt="imagen de dos personas sorprendidas"  class="img-fluid">
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/exquisita-chica-largo-cabello-ondulado-aretes-redondos-panuelo-moda-elegante-vestido-amarillo-posando-ojos-cerrados-sonriendo_197531-23921.jpg?t=st=1724178076~exp=1724181676~hmac=b51308ffe5181bd1365d00f5c488debae76886ec6af62f98fd4b6e8d2d1bb2c4&w=996" alt="Imagen de un perro y una mujer" class="img-fluid ">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/feliz-joven-compania-amigos-sonrientes-emocionados-parque_285396-7633.jpg?t=st=1724178482~exp=1724182082~hmac=77ee01f3789d6ad54557d7ab091e7e2bc3c395fe3049f84bb245d7fbc5530f07&w=996" alt="imagen de un grupo de personas alegres" class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/brillante-ciudad-nocturna_1127-8.jpg?t=st=1724179214~exp=1724182814~hmac=da4b1a8f24afb59caf49fa7ecc2e7d2d61ab1e929884ac6ae8eae6e25167831b&w=996" alt="imagen de una ciudad"  class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/mujer-moda-posando-estudio_23-2148632206.jpg?t=st=1724179341~exp=1724182941~hmac=969995baddd0776034c65859bb52ae4a0364905ae2ea99315bb0c0f52ef8571c&w=996" alt="Imagen de una mujer sonriendo" class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/vista-torre-eiffel_1393-69.jpg?t=st=1724179443~exp=1724183043~hmac=bf3bddbc904ed5b68e77207d39c9be47b95eb2be682f99e36ca82aaa762611ed&w=996" alt="imagen de la torre ifel" class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/alegres-amigos-posando-fiesta_23-2148231957.jpg?t=st=1724179511~exp=1724183111~hmac=a9336fd0316f9b2e3cc648e274f15369c86d19630a344512317287b808879ca0&w=996" alt="imagen de personas celebrando"  class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/hija-feliz-divirtiendose-sus-padres-mientras-muda-apartamento-nuevo_637285-12378.jpg?t=st=1724179587~exp=1724183187~hmac=70969ecef1fe71dda8fbc7c1a40a7c819f9b2201895c5d6afcf22865d0a3c3ae&w=996" alt="Imagen de una familia" class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/encendido-computadora-portatil-gris_400718-47.jpg?t=st=1724179622~exp=1724183222~hmac=48ab3377c4cb83103c5c4f7b690bba64803d690e72c7edab2892ae53d8325926&w=996" alt="imagen de code" class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+        <div class="card mx-auto w-50 my-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 p-2"><h4>My Crazy dog Spark!</h4></div>
+              <div class="col-6 text-end">08/26</div>
+            </div>
+          </div>
+          <img src="https://img.freepik.com/foto-gratis/joven-pareja-hermosa-posando-sonriendo-divirtiendose-sobre-pared-azul-hombre-abrigo-lluvia_176420-11821.jpg?t=st=1724179703~exp=1724183303~hmac=14041e928a169dbea3e39e4735fd5f5d68874ab27e03057bd9f9ecd960427319&w=996" alt="imagen de dos personas sorprendidas"  class="img-fluid">
+          <div class="card-body">
+            <p class="fw-bold my-0">204 likes</p>
+            <p class="">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+    <!--CDN BOOTSTRAP js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
